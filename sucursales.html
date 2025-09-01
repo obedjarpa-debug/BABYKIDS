@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestras Sucursales-BABYKIDS</title>
+  <link rel="stylesheet" href="style.css"> <!-- tu CSS principal -->
+   <link rel="icon" type="image/png" href="images/images/logo.png">
+  <style>
+    /* Estilos específicos para sucursales */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 50px;
+      padding: 0;
+      background-color: black;
+      color: #333;
+    }
+
+    .sucursales {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .titulo-sucursales {
+      font-size: 2.5rem;
+      color: #06ad80;
+      margin-bottom: 50px;
+    }
+
+    .contenedor-sucursales {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      text-align: left;
+    }
+
+    .sucursal {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .sucursal h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #06ad80;
+    }
+
+    .sucursal p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .sucursal iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      border: 0;
+    }
+
+  </style>
+</head>
+<body>
+
+        <header>
+        <div class="menu container">
+            <a href="#"><img src="images/images/logo.png" class="logo" alt=""></a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="images/images/menu.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="inicio.html">Nosotros</a></li>
+                    <li> <a href="index.html">Productos</a></li>
+                    <li> <a href="sucursales.html">Sucursales</a></li>
+                    <li> <a href="calculadora.html">Calculadora</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+  <section class="sucursales">
+    <h1 class="titulo-sucursales">Nuestras Sucursales</h1>
+
+    <div class="contenedor-sucursales">
+
+      <div class="sucursal">
+        <h3>Sucursal Paseo Aranjuez</h3>
+        <p>Av. América #488 Esq, C. Pantaleon Dalence, Cochabamba, Bolivia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.802695757152!2d-66.15492480000002!3d-17.373224599999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e375aad2a6e527%3A0x1d75dae82883c84a!2sPaseo%20Aranjuez!5e0!3m2!1ses!2sbo!4v1756685785895!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="sucursal">
+        <h3>Casa Matriz HuperMall</h3>
+        <p>Av. Pando y Av. Portales, Cochabamba, Bolivia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.7518601576135!2d-66.1508361!3d-17.375669299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3741a5170e4eb%3A0xa86f634308d408ab!2sHupermall!5e0!3m2!1ses!2sbo!4v1756685627943!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="sucursal">
+        <h3>Sucursal Esteban Arce</h3>
+        <p>C. Esteban Arze, Cochabamba, Bolivia</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1738892562526!2d-66.15582729999998!3d-17.4034407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e373efafb39acd%3A0xdf02b884a795a056!2sDubai%20Mall!5e0!3m2!1ses!2sbo!4v1756685896546!5m2!1ses!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+</section>
+
+<footer class="footer container">
+        <img class="logo-2" src="images/images/logo2.png" alt="">
+
+        <div class="links">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="#">Teléfono: +591 123 45678</a></li>
+                <li><a href="#">Correo: info@babykids.com</a></li>
+                <li><a href="#">Atención: Lun-Vie 9:00 - 18:00</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>Informacion Legal</h4>
+            <ul>
+                <li><a href="#">Aviso de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Derechos de autor</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>© 2025 BABYKIDS. Todos los derechos reservados.</h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s1.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s2.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Leche-BABYKIDS</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="icon" type="image/png" href="images/images/logo.png">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      margin: 50px;
+    }
+
+    .calculadora {
+      max-width: 800px;
+      margin: 80px auto;
+      background-color: #101116;
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .calculadora h1 {
+      font-size: 2.5rem;
+      color: #06ad80;
+      margin-bottom: 30px;
+    }
+
+    .formulario input, .formulario select, .formulario textarea {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .formulario button {
+      background-color: #06ad80;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .formulario button:hover {
+      background-color: #04906a;
+    }
+
+    .resultado {
+      margin-top: 30px;
+      background-color: black;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="menu container">
+            <a href="#"><img src="images/images/logo.png" class="logo" alt=""></a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="images/images/menu.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="index.html">Nosotros</a></li>
+                    <li> <a href="Productos.html">Productos</a></li>
+                    <li> <a href="sucursales.html">Sucursales</a></li>
+                    <li> <a href="calculadora.html">Calculadora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <section class="calculadora">
+    <h1>Calculadora de Cantidad de Leche</h1>
+    <p>Introduce los datos de tu bebé para obtener un cálculo aproximado (solo fines académicos).</p>
+
+    <form class="formulario" id="formCalculadora">
+      <input type="number" name="edad" id="edad" placeholder="Edad en meses" min="0" required>
+      <input type="number" name="peso" id="peso" placeholder="Peso en kg" step="0.1" required>
+      <input type="number" name="altura" id="altura" placeholder="Altura en cm" step="0.1" required>
+      <input type="number" name="tomas" id="tomas" placeholder="Número de tomas al día (opcional)">
+      <textarea name="observaciones" id="observaciones" rows="3" placeholder="Observaciones (opcional)"></textarea>
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div class="resultado" id="resultado"></div>
+  </section>
+
+  <script>
+    const form = document.getElementById('formCalculadora');
+    const resultado = document.getElementById('resultado');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const edad = parseFloat(document.getElementById('edad').value);
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      const tomas = parseInt(document.getElementById('tomas').value) || 0;
+
+      // Fórmula aproximada para fines académicos
+      // No es exacta ni médica
+      let lecheDiaria = (peso * 150) / 100; // ml aproximados por kg
+      if (edad < 6) {
+        lecheDiaria *= 1; // bebés menores de 6 meses
+      } else if (edad < 12) {
+        lecheDiaria *= 0.8; // bebés entre 6-12 meses
+      } else {
+        lecheDiaria *= 0.6; // >1 año
+      }
+
+      // Si indican número de tomas, dividir por tomas
+      let lechePorToma = tomas > 0 ? (lecheDiaria / tomas) : 0;
+
+      // Mostrar resultado
+      let mensaje = `<strong>Leche diaria aproximada:</strong> ${lecheDiaria.toFixed(0)} ml`;
+      if (tomas > 0) {
+        mensaje += `<br><strong>Por toma:</strong> ${lechePorToma.toFixed(0)} ml`;
+      }
+
+      resultado.innerHTML = mensaje;
+    });
+  </script>
+
+
+    <footer class="footer container">
+        <img class="logo-2" src="images/images/logo2.png" alt="">
+
+        <div class="links">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="#">Teléfono: +591 123 45678</a></li>
+                <li><a href="#">Correo: info@babykids.com</a></li>
+                <li><a href="#">Atención: Lun-Vie 9:00 - 18:00</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>Informacion Legal</h4>
+            <ul>
+                <li><a href="#">Aviso de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Derechos de autor</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>© 2025 BABYKIDS. Todos los derechos reservados.</h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s1.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s2.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

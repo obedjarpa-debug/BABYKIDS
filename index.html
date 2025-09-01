@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - BABYKIDS</title>
+  <link rel="stylesheet" href="style.css"> <!-- Apunta a tu CSS principal -->
+   <link rel="icon" type="image/png" href="images/images/logo.png">
+  <style>
+    /* Estilos específicos para la página de inicio */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 50px;
+      padding: 0;
+      background-color: black;
+      color: #333;
+    }
+
+    .inicio {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .titulo-inicio {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #06ad80; /* Puedes usar el color principal de tu marca */
+    }
+
+    .descripcion-inicio {
+      font-size: 1.2rem;
+      color: #FDFDFD;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    .informacion-empresa {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .informacion-empresa > div {
+      width: 30%;
+      min-width: 250px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .informacion-empresa h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #06ad80;
+    }
+
+    .informacion-empresa p,
+    .informacion-empresa ul {
+      font-size: 1rem;
+      color: black;
+    }
+
+    .informacion-empresa ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+/* Sección Productos */
+.productos {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-productos {
+  font-size: 2.5rem;
+  color: #06ad80;
+  margin-bottom: 50px;
+}
+
+.titulo-productos a{
+  font-weight: 100;
+}
+/* Contenedor de productos estilo Misión/Visión/Valores */
+.contenedor-productos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: left;
+}
+
+.producto {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 280px;
+  gap: 20px;
+}
+
+.producto img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid black;
+}
+
+.texto-producto p {
+  margin: 20px 0 0 0;
+  font-size: 1.3rem;
+  color: #06ad80;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-producto a{
+  margin: 0;
+  color: #06ad80;
+  font-weight: bolder;
+}
+
+.links{
+  text-align: left;
+}
+
+@media(max-width: 991px){
+  .links{
+    text-align: center;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+        <div class="menu container">
+            <a href="#"><img src="images/images/logo.png" class="logo" alt=""></a>
+            <input type="checkbox" id="menu">
+            <label for="menu"><img src="images/images/menu.png" class="menu-icono" alt=""></label>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="index.html">Nosotros</a></li>
+                    <li> <a href="Productos.html">Productos</a></li>
+                    <li> <a href="sucursales.html">Sucursales</a></li>
+                    <li> <a href="calculadora.html">Calculadora</a></li>
+                </ul>
+            </nav>
+        </div>
+  </header>
+
+  <section class="inicio">
+    <h1 class="titulo-inicio">BABYKIDS</h1>
+    <p class="descripcion-inicio">
+      En BABYKIDS nos dedicamos a ofrecer biberones de alta calidad, elaborados con materiales seguros y libres de BPA, para garantizar el bienestar de los más pequeños.
+    </p>
+
+    <div class="informacion-empresa">
+      <div class="mision">
+        <h2>Misión</h2>
+        <p>
+          Brindar productos de alimentación infantil que promuevan el desarrollo saludable de los bebés, combinando innovación y seguridad en cada diseño.
+        </p>
+      </div>
+      <div class="vision">
+        <h2>Visión</h2>
+        <p>
+          Ser la marca líder en Bolivia en productos para la alimentación infantil, reconocida por su compromiso con la calidad y la satisfacción del cliente.
+        </p>
+      </div>
+      <div class="valores">
+        <h2>Valores</h2>
+        <ul>
+          <li>Seguridad</li>
+          <li>Innovación</li>
+          <li>Compromiso</li>
+          <li>Calidad</li>
+        </ul>
+      </div>
+    </div>
+
+<section class="productos">
+  <h2 class="titulo-productos">Nuestros Biberones y Tetinas <a>en pocas palabras....</a></h2>
+
+  <div class="contenedor-productos">
+    <div class="producto">
+      <img src="images/images/item2.png" alt="Producto 1">
+      <div class="texto-producto">
+        <p><a>Anticolicos</a></p>
+      </div>
+    </div>
+
+    <div class="producto">
+      <img src="images/images/item3.png" alt="Producto 2">
+      <div class="texto-producto">
+        <p>Cuello ancho <a >facilita llenado y la limpieza</a></p>
+      </div>
+    </div>
+
+    <div class="producto">
+      <img src="images/images/item1.png" alt="Producto 3">
+      <div class="texto-producto">
+        <p><a>Sin BPA</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer container">
+        <img class="logo-2" src="images/images/logo2.png" alt="">
+
+        <div class="links">
+            <h4>Contacto</h4>
+            <ul>
+                <li><a href="#">Teléfono: +591 123 45678</a></li>
+                <li><a href="#">Correo: info@babykids.com</a></li>
+                <li><a href="#">Atención: Lun-Vie 9:00 - 18:00</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>Informacion Legal</h4>
+            <ul>
+                <li><a href="#">Aviso de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Derechos de autor</a></li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h4>© 2025 BABYKIDS. Todos los derechos reservados.</h4>
+            <div class="socials">
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s1.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s2.svg" alt="">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="social">
+                        <img src="images/images/s3.svg" alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
